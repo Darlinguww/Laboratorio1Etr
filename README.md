@@ -1,20 +1,20 @@
 # Laboratorio1Etr
-package zg;
-
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileReader;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.io.PrintWriter;
-import java.util.Scanner;
+     package zg;
+     
+     import java.io.BufferedReader;
+     import java.io.File;
+     import java.io.FileReader;
+     import java.io.FileWriter;
+     import java.io.IOException;
+     import java.io.PrintWriter;
+     import java.util.Scanner;
 
      
-public class ZGEJ1 {
+     public class ZGEJ1 {
 
     
     public static void Llenar(Scanner sc, String file_name){
-        String ced, nam, saldo;
+        String ced, nam, cargo,tel,salfm,comisiones;
        
         try {
             
@@ -32,14 +32,21 @@ public class ZGEJ1 {
                 ced = sc.nextLine();
                 System.out.println("Ingrese Nombre");
                 nam = sc.nextLine();
-                System.out.println("Ingrese Saldo");
-                saldo = sc.nextLine();
-                while(Double.parseDouble(saldo) < 0){
+                System.out.println("Ingrese Cargo");
+                cargo = sc.nextLine();
+                System.out.println("Ingrese Teléfono");
+                tel = sc.nextLine();
+                System.out.println("Ingrese Salario Fijo Mensual");
+                salfm = sc.nextLine();
+                System.out.println("Ingrese Comisiones");
+                comisiones = sc.nextLine();
+                
+                while(Double.parseDouble(cargo) < 0){
                     System.out.println("Saldo debe ser positivo");
-                    saldo = sc.nextLine();
+                    cargo = sc.nextLine();
                 }
-                if (!ced.isEmpty() && !nam.isEmpty() && !saldo.isEmpty()){
-                    register_clientes.println(ced+"\t"+ nam +"\t"+ saldo);
+                if (!ced.isEmpty() && !nam.isEmpty() && !cargo.isEmpty()&& !tel.isEmpty() && !salfm.isEmpty() && !comisiones.isEmpty()){
+                    register_clientes.println(ced+"\t"+ nam +"\t"+ cargo +"\t"+ tel+ "\t" +salfm+ "\t" +comisiones );
                 }
                 System.out.println("Hay registos? si - no");
                 hay_cliente = sc.nextLine();  
@@ -61,19 +68,16 @@ public class ZGEJ1 {
         //System.out.println("Digite nombre del archivo");
         //String file_name = sc.nextLine(); // Archivo
         //System.out.println("Se llama a funcion crear o llenar archivo");
-        System.out.println("Ingresar informacion de clientes");
-        Llenar(sc, "Clientes");
+        System.out.println("Ingresar informacion de empleados");
+        Llenar(sc, "Empleados");
         
         //System.out.println("Llenar informacion de transacciones");
         //Llenar(sc, "Transacciones");
-
-//        System.out.println("¿Qué archivo desea abrir?");
-//        String file_name = sc.nextLine();
-//        Leer(sc, file_name);
+        //System.out.println("¿Qué archivo desea abrir?");
+        //String file_name = sc.nextLine();
+        //Leer(sc, file_name);
         //Update_stuff("Clientes",  "Transacciones");
         sc.close();
     }
     
-    
-}
-
+     }
