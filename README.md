@@ -15,7 +15,7 @@
     
     public static void Llenar(Scanner sc, String file_name){
         String ced, nam, cargo,tel,salfm,comisiones;
-       
+       //Prueba
         try {
             
             FileWriter outFile = new FileWriter(file_name + ".txt", false);  //Archivo.txt //Crea un archivo en la misma carpeta
