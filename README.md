@@ -8,10 +8,21 @@
      import java.io.IOException;
      import java.io.PrintWriter;
      import java.util.Scanner;
+     import javax.swing.*;
+     import java.awt.*;
 
      
      public class ZGEJ1 {
-
+     public class interfaz extends JFrame(){
+     public interfaz(){
+     setTitle("Ventana");
+     setSize(300,300);
+     setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+     setVisible(true);
+     
+     }
+     
+     }
     
     public static void Llenar(Scanner sc, String file_name){
         String ced, nam, cargo,tel,salfm,comisiones;
